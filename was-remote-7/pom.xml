@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <!-- Parent -->
     <parent>
@@ -22,19 +21,8 @@
     <!-- Properties -->
 
     <properties>
-        <was_home>${env.WAS7_HOME}</was_home>
         <version.ejb_api>3.0</version.ejb_api>
     </properties>
-
-    <profiles>
-        <profile>
-            <id>build-server</id>
-            <properties>
-                <was_home>${WAS7_HOME}</was_home>
-            </properties>
-        </profile>
-    </profiles>
-
 
     <!-- Build -->
 
@@ -102,8 +90,6 @@
             <groupId>com.ibm.websphere</groupId>
             <artifactId>was-public</artifactId>
             <version>7.0.0</version>
-            <scope>system</scope>
-            <systemPath>${was_home}/dev/was_public.jar</systemPath>
         </dependency>
 
         <!-- Testing -->
@@ -133,16 +119,12 @@
             <groupId>com.ibm.websphere</groupId>
             <artifactId>ws-admin-client</artifactId>
             <version>7.0.0</version>
-            <scope>system</scope>
-            <systemPath>${was_home}/runtimes/com.ibm.ws.admin.client_7.0.0.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>com.ibm.websphere</groupId>
             <artifactId>jgss-provider</artifactId>
             <version>7.0.0</version>
-            <scope>system</scope>
-            <systemPath>${was_home}/java/jre/lib/ibmjgssprovider.jar</systemPath>
         </dependency>
 
     </dependencies>

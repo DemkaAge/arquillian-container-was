@@ -20,6 +20,12 @@
     <name>Arquillian Container Parent WebSphere AS</name>
     <description>WebSphere AS Container integrations for the Arquillian Project</description>
 
+    <scm>
+        <connection>scm:git:git@github.com/DemkaAge/arquillian-container-was.git</connection>
+        <developerConnection>scm:git:git@github.com/DemkaAge/arquillian-container-was.git</developerConnection>
+        <url>http://github.com/DemkaAge/arquillian-container-was</url>
+    </scm>
+
     <!-- Properties -->
     <properties>
         <!-- Versioning -->
@@ -82,5 +88,29 @@
                 <module>wlp-managed-8.5</module>
             </modules>
         </profile>
+
+        <profile>
+            <id>was-remote-7</id>
+            <modules>
+                <module>was-remote-7</module>
+            </modules>
+        </profile>
     </profiles>
+
+    <!--private distribution-->
+    <distributionManagement>
+        <repository>
+            <id>ufa.artifactory</id>
+            <name>libs-release</name>
+            <url>http://172.16.127.230/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>ufa.artifactory.snapshot</id>
+            <name>libs-snapshot</name>
+            <url>http://172.16.127.230/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+
 </project>
